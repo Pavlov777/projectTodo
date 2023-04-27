@@ -24,7 +24,7 @@ router
       const { TodoId } = req.params;
       const result = await Todo.destroy({ where: { id: TodoId } });
       if (result) {
-        res.json(result);
+        res.json(TodoId);
       }
     } catch ({ message }) {
       res.json(message);
