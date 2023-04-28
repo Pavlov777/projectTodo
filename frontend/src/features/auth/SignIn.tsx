@@ -8,28 +8,44 @@ function SignIn(): JSX.Element {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const onHandleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
+  const onHandleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     e.preventDefault();
     const response = await fetch('/auth/signin', {
       method: 'post',
-      headers: { 'Content-type': 'application/json', },
-      body: JSON.stringify({ email, password })
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify({ email, password }),
     });
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     dispatch({ type: 'SIGN_IN', payload: data });
     navigate('/');
   };
 
   return (
-    <form className="form" onSubmit={onHandleSubmit}>
-      <label htmlFor="email">Email
-        <input className="input" value={email} onChange={(e) => setEmail(e.target.value)} type="email" />
+    <form className='form' onSubmit={onHandleSubmit}>
+      <label htmlFor='email'>
+        Email
+        <input
+          className='input'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          type='email'
+        />
       </label>
-      <label htmlFor="password">Password
-        <input className="input" value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
+      <label htmlFor='password'>
+        Password
+        <input
+          className='input'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          type='password'
+        />
       </label>
-      <button className="btn" type="submit">Go!</button>
+      <button className='btn' type='submit'>
+        Go!
+      </button>
     </form>
   );
 }
