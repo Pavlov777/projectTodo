@@ -4,7 +4,7 @@ const { User } = require('../db/models');
 
 router.post('/signup', async (req, res) => {
   const { name, email, password } = req.body;
-  console.log(req.body);
+  // console.log(req.body);
   try {
     if (name && email && password) {
       const user = await User.findOne({ where: { email } });
@@ -42,7 +42,7 @@ router.post('/signin', async (req, res) => {
           password: user.password,
         };
         req.sessions.userId = findUser.id;
-        res.status(200).json(findUser);
+        res.status(201).json(findUser);
       } else {
         res.status(403).json({ message: 'Маил пароль не подходят' });
       }

@@ -1,0 +1,9 @@
+.nav__menu {
+  display: flex;
+}
+
+.nav__menu,
+li {
+  display: flex;
+  margin: 20px;
+}

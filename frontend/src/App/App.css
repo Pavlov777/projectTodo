@@ -1,7 +1,7 @@
 .App {
-    background-image: linear-gradient(to right bottom, #1d6b8a, #43a6b9);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: linear-gradient(to right bottom, #1d6b8a, #43a6b9);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .App-logo {
@@ -40,7 +40,6 @@
 }
 
 .div_todo {
-
   /* background: linear-gradient(to bottom, #eee, #ccc);
   box-shadow: 1px 1px 5px #ccc;
   padding: 10px; */
@@ -54,8 +53,8 @@
   font-size: 20px;
   color: #333; */
 
-  background-color: #E2DDC7;
-  border: 4px dashed #6D4C41;
+  background-color: #e2ddc7;
+  border: 4px dashed #6d4c41;
   padding: 20px;
   border-radius: 25px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
@@ -66,10 +65,10 @@
 }
 
 .div_user {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 .nav_container {
@@ -77,9 +76,9 @@
   padding: 10px;
   border: 1px solid #ccc;
   /* Если навбар - это список ссылок, то можно добавить стили для списка */
-   list-style-type: none;
-   margin:0; 
-  padding: 0; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .form {
@@ -112,4 +111,27 @@
 .input:focus {
   outline: none;
   border-color: #7fc4f5;
+}
+button {
+  margin: 10px;
+}
+
+.main {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+}
+.main,
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+}
+.nav_container,
+main {
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }

@@ -31,6 +31,24 @@ router
     }
   });
 
+// router.put('/todos', async (req, res) => {
+//   try {
+//     // const { TodoId } = req.params;
+//     const { title, description } = req.body;
+//     if (title && description) {
+//       const todosh = await Todo.findOne({ where: { id: TodoId } });
+//       todosh.title = title;
+//       todosh.description = description;
+//       todosh.save();
+//       res.json({ message: 'complete' });
+//     } else {
+//       res.json({ message: 'Заполните все поля!' });
+//     }
+//   } catch (error) {
+//     res.send(error.message);
+//   }
+// });
+
 router.get('/users', async (req, res) => {
   try {
     const users = await User.findAll({ raw: true });
