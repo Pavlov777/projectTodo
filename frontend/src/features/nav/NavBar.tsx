@@ -16,6 +16,9 @@ function NavBar(): JSX.Element {
             <NavLink to="/todos">Todos</NavLink>
           </li>
           <li>
+            <NavLink to="/todos">My Todos</NavLink>
+          </li>
+          <li>
             <NavLink to="/users">Users</NavLink>
           </li>
           <li>
